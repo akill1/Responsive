@@ -1,0 +1,117 @@
+/* Topbar.css */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  /* Keeps the left and right sections spaced */
+  align-items: center;
+  height: 56px;
+  /* Matches the dimensions in the image */
+  width: 83%;
+  /* Adjusted width */
+  background-color: #fff;
+  /* Ensures the white background like in the image */
+  padding: 0 20px;
+  border-bottom: 2px solid #ddd;
+  /* Adds a line under the topbar */
+  margin-left: 205px;
+  /* Centers the topbar relative to the sidebar */
+  /* position: fixed; */
+  top: 0;
+  /* Sticks to the top of the viewport */
+  z-index: 1000;
+  /* Ensures it stays above other content */
+  box-sizing: border-box;
+  /* Includes padding in height calculation */
+}
+
+.search-container {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+  /* adjust width as needed */
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 16px 8px 44px;
+  border: none;
+  /* No visible border */
+  outline: none;
+  /* Remove focus outline */
+  font-size: 14px;
+  background-color: transparent;
+  /* No background color */
+  box-sizing: border-box;
+  color: #333;
+  /* Text color */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  /* shift the icon a bit to maintain balance */
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+}
+
+.topbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* Creates spacing between the icons */
+}
+
+.topbar-icons .feedback {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* Keeps the "Feedback?" label spaced from the speech bubble icon */
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+}
+
+.topbar-icons i {
+  font-size: 20px;
+  /* Matches the icon size in the image */
+  cursor: pointer;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    width: 39rem;
+    margin-left: 0;
+    margin-top:25%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .topbar .feedback span {
+    display: none;
+  }
+
+  /* Ensure the icon stays aligned */
+  .topbar .feedback {
+    display: flex;
+    align-items: center;
+    /* adjust padding/margins as needed */
+  }
+
+
+  .topbar-icons svg {
+    width: 30px;
+    /* or larger */
+    height: 30px;
+  }
+
+  .topbar-icons {
+    gap: 2rem;
+  }
+
+  .search-container {
+    font-size: 14px;
+  }
+}
